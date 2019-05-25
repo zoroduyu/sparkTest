@@ -1,25 +1,21 @@
 package cn.edu360.spark;
 
 
-import org.apache.spark.SparkConf;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.SparkSession;
-import org.apache.spark.sql.hive.HiveContext;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class test03 {
     public static void main(String[] args) throws ParseException {
+    	
         SparkSession spark = SparkSession
                 .builder()
                 .appName("Java Spark Hive Example")
